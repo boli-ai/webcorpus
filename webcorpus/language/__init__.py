@@ -5,7 +5,6 @@ Copyright © Divyanshu Kakwani 2019, all rights reserved
 import string
 import unicodedata as ud
 
-
 LC_NAME = {
     "as": "assamese",
     "bd": "bodo",
@@ -46,6 +45,9 @@ LC_SCRIPT = {
     "ur": "arabic",
     "bd": "devanagari",
     "sa": "devanagari"
+    "san": "ol chiki",
+    "dg": "dogra",
+    "mni": "meitei",
 }
 
 
@@ -62,6 +64,12 @@ SCRIPT_DIGITS = {
     "latin": "0123456789",
     "urdu": "٠١٢٣٤٥٦٧٨٩٪",
 }
+
+dogri = ""
+manipuri = (
+    "ꯀꯁꯂꯃꯄꯅꯆꯇꯈꯉꯊꯋꯌꯍꯎꯏꯐꯑꯒꯓꯔꯕꯖꯗꯘꯙꯚꯛꯜꯝꯞꯟꯠꯡꯢꯣꯤꯥꯦꯧꯨꯩꯪ꯫꯬꯭꯰꯱꯲꯳꯴꯵꯶꯷꯸꯹ꫠꫡꫢꫣꫤꫥꫦꫧꫨꫩꫪꫫꫬꫭꫮꫯ꫰꫱ꫲꫳꫴꫵ"
+)
+santhali = "᱐᱑᱒᱓᱔᱕᱖᱗᱘᱙ᱚᱛᱜᱝᱞᱟᱠᱡᱢᱣᱤᱥᱦᱧᱨᱩᱪᱫᱬᱭᱮᱯᱰᱱᱲᱳᱴᱵᱶᱷᱸᱹᱺᱻᱼᱽ᱾᱿"
 
 
 def name2code(lang):
@@ -86,5 +94,11 @@ def in_script(char, script_name):
         if script_name not in ud.name(char).lower():
             return False
     except:
+        if char in santhali:
+            return True
+        elif char in dogri:
+            return True
+        elif char in manipuri:
+            return True
         return False
     return True
