@@ -45,6 +45,7 @@ LC_SCRIPT = {
     "en": "latin",
     "ur": "arabic",
     "bd": "devanagari",
+    "sa": "devanagari"
 }
 
 
