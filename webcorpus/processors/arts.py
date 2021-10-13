@@ -38,7 +38,7 @@ class ArtsProcessor:
 
         chr_valid = [in_script(c, self.script) for c in text]
         subarr_sum = chr_valid.copy()
-        print(chr_valid, subarr_sum)
+#         print(chr_valid, subarr_sum)
         for cur_sz in range(2, win_sz):
             subarr_sum = [
                 chr_valid[i] + subarr_sum[i + 1] for i in range(txt_sz - cur_sz)
