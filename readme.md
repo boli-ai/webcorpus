@@ -71,14 +71,39 @@ The crawls (html files) will be saved in the folder `html_path` and will be used
 
 ##### Processing corpus
 
+Once crawling is complete, We can process the html pages to extract articles, sentences or genres (uses the url route to infer genre, for instance sentences from `https://www.bbc.com/sport` are grouped in sports genre) of each website.
+
 
   ```bash
   # all paths must be absolute paths
   python3 scripts/process.py --operation <operation code> --lang <lang code> --input <input path> --output <output path>
   ```
-
 * Processing operations supported: `extract_arts`, `extract_sents`, `extract_genres`
 
+For example, to extract articles for all the html sources inside `/home/username/ta` folder (assuming ta folder contains all the tamil html crawls), you can run the following command to save the processed articles in `/home/username/ta_arts`:
+```bash
+python3 scripts/process.py --operation extract_arts --lang ta --input /home/username/ta --output /home/username/ta_arts
+```
+The `lang` tag is used to filter articles that are in different scripts (lang="hi" will ignore articles that have non-devnagiri characters beyond a certain threshold).
+After running the above command, `/home/username/ta_arts/<source>/<articleid>` would a json file with following information:
+```
+{
+    "title": <article title>,
+    "body":<artcile body>,
+    "source": <name of the source>,
+    "url": <base url/route>,
+    "timestamp": <timestamp>
+}
+```
+This json metadata format is similar to popular monoligual datasets like `C4` (see some samples [here](https://huggingface.co/datasets/allenai/c4/tree/main/realnewslike) ).
+
+To convert the above processed tamil articles to sentences, use the following command:
+```bash
+python3 scripts/process.py --operation extract_sents --lang ta --input /home/username/ta_arts --output /home/username/sents/ta.txt
+```
+This will create `/home/username/sents/ta.txt` that has tamil sentences (one per line) from all the processed articles.
+
+**We further encourage users to add language-identification, removing offensive text or any other forms of cleaning before using the final corpus for your work**
 
 ### Features
 
