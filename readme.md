@@ -51,7 +51,7 @@ curl http://localhost/schedule.json \
 -d lang=ta \
 -d log_path=/home/username/webcorpus/logs
 ```
-In the above command, `https://www.bbc.com/tamil` will be the base url that we use to start crawling and crawler fetches all the urls in this base url to continue crawling. To avoid advertisements, redirects to other websites, etc, **We only crawl websites of the form `<base url>/route`. Hence this base url is very important**
+In the above command, `https://www.bbc.com/tamil` will be the base url that we use to start crawling and crawler fetches all the urls inside this base url to continue crawling. To avoid advertisements, redirects to other websites, etc, **We only crawl websites of the form `<base url>/route`. Hence this base url is very important**
 
 The crawls (html files) will be saved in the folder `html_path` and will be used for further processing later.
 
