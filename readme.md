@@ -80,7 +80,7 @@ Once crawling is complete, We can process the html pages to extract articles, se
   ```
 * Processing operations supported: `extract_arts`, `extract_sents`, `extract_genres`
 
-For example, to extract articles for all the html sources inside `/home/username/ta` folder (assuming ta folder contains all the tamil html crawls), you can run the following command to save the processed articles in `/home/username/ta_arts`:
+For example, to extract articles for all the html sources inside `/home/username/ta` folder (assuming ta folder contains all the tamil html crawls), you should run the following command to save the processed articles in `/home/username/ta_arts`:
 ```bash
 python3 scripts/process.py --operation extract_arts --lang ta --input /home/username/ta --output /home/username/ta_arts
 ```
@@ -103,7 +103,7 @@ python3 scripts/process.py --operation extract_sents --lang ta --input /home/use
 ```
 This will create `/home/username/sents/ta.txt` that has tamil sentences (one per line) from all the processed articles.
 
-**We further encourage users to add language-identification, removing offensive text or any other forms of cleaning before using the final corpus for your work**
+**Based on your tasks, users may add language-identification, removing offensive text or any other forms of cleaning before using the final corpus**
 
 ### Features
 
