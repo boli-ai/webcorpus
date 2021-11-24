@@ -17,6 +17,8 @@ DOWNLOAD_TIMEOUT = 60
 RETRY_ENABLED = True
 RETRY_TIMES = 2     # + initial request
 
+FEED_EXPORT_ENCODING = 'utf-8'
+
 
 LOG_LEVEL = 'DEBUG'
 
