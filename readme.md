@@ -55,6 +55,26 @@ In the above command, `https://www.bbc.com/tamil` will be the base url that we u
 
 The crawls (html files) will be saved in the folder `html_path` and will be used for further processing later.
 
+To generate all the crawl commands from a csv or text file containing all the sources:
+```
+python get_crawl_commands.py -f <sources txt/csv file> -lp <webcorpus logs folder> -of <output folder>
+
+Args:
+ -quiet, --q           Quiet mode
+  -f FILE, --file FILE  Text/CSV file containing the urls to crawl
+  -lp LOG_PATH, --log_path LOG_PATH
+                        Path to webcorpus logs folder
+  -of OUTPUT_FOLDER, --output_folder OUTPUT_FOLDER
+                        Output folder for saving crawls. The crawls would be
+                        saved in {output_folder}/{lang_code} (lang_code is inferred from the text/csv file name)
+```
+
+example command:
+```bash
+python get_crawl_commands.py -f "sources/as.csv" -lp "webcorpus/logs" -of "crawling_outputs"
+```
+
+
 * Monitor crawls: You can monitor the jobs at the dashboard available at `http://<ip address>`. If using GCP, make sure to enable HTTP traffic on your VM. 
 
 
