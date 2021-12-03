@@ -66,7 +66,7 @@ Args:
                         Path to webcorpus logs folder
   -of OUTPUT_FOLDER, --output_folder OUTPUT_FOLDER
                         Output folder for saving crawls. The crawls would be
-                        saved in {output_folder}/lang_code
+                        saved in {output_folder}/{lang_code} (lang_code is inferred from the text/csv file name)
 ```
 
 example command:
