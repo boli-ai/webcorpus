@@ -91,7 +91,10 @@ python get_crawl_commands.py -f "sources/as.csv" -lp "webcorpus/logs" -of "crawl
 
 ##### Processing corpus
 
+
 Once crawling is complete, We can process the html pages to extract articles, sentences or genres (uses the url route to infer genre, for instance sentences from `https://www.bbc.com/sport` are grouped in sports genre) of each website.
+
+For processing, make sure that Java is installed on your system (see [here](https://www.digitalocean.com/community/tutorials/how-to-install-java-with-apt-on-ubuntu-18-04) to setup Java on Ubuntu)
 
 
   ```bash
