@@ -46,8 +46,10 @@ LC_SCRIPT = {
     "bd": "devanagari",
     "sa": "devanagari",
     "san": "ol chiki",
-    "dg": "dogra",
-    "mni": "meitei",
+    "dg": "devanagari",
+    "mni": "manipuri",
+    "gom": "devanagari",
+    "mai": "devanagari"
 }
 
 
