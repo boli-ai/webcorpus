@@ -50,6 +50,8 @@ LC_SCRIPT = {
     "mni": "manipuri",
     "gom": "devanagari",
     "mai": "devanagari"
+    "kha": "latin",
+    "ks": "arabic"
 }
 
 
