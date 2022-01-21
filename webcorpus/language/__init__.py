@@ -49,7 +49,7 @@ LC_SCRIPT = {
     "dg": "devanagari",
     "mni": "manipuri",
     "gom": "devanagari",
-    "mai": "devanagari"
+    "mai": "devanagari",
     "kha": "latin",
     "ks": "arabic"
 }
