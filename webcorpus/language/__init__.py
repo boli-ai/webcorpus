@@ -43,6 +43,7 @@ LC_SCRIPT = {
     "as": "bengali",
     "en": "latin",
     "ur": "arabic",
+    "sd": "sindhi",
     "bd": "devanagari",
     "sa": "devanagari",
     "san": "ol chiki",
