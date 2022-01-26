@@ -27,8 +27,8 @@ class SentProcessor:
         self.script = code2script(lang)
         self.input_corpus = NewsCorpus(lang, input_path)
         self.output_corpus = FileCorpus(lang, output_path)
-        normalizer_factory = IndicNormalizerFactory()
-        self.normalizer = normalizer_factory.get_normalizer(self.lang)
+        # normalizer_factory = IndicNormalizerFactory()
+        # self.normalizer = normalizer_factory.get_normalizer(self.lang)
 
     def process_sent(self, sent):
         """
