@@ -12,6 +12,7 @@ from pathlib import Path
 from webcorpus.processors.arts import ArtsProcessor
 from webcorpus.processors.sent import SentProcessor
 from webcorpus.processors.topic import TopicProcessor
+from webcorpus.processors.paragraph import ParagraphProcessor
 
 
 parser = argparse.ArgumentParser()
@@ -30,6 +31,9 @@ elif args.operation == 'extract_sents':
     proc.run()
 elif args.operation == 'extract_genres':
     proc = TopicProcessor(args.lang, args.input, args.output) 
+    proc.run()
+elif args.operation == 'extract_paragraphs':
+    proc = ParagraphProcessor(args.lang, args.input, args.output) 
     proc.run()
 else:
     print('Invalid operation')
