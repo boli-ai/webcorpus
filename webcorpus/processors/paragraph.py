@@ -36,7 +36,7 @@ class ParagraphProcessor:
         """
         Create a paragraph file from an article corpus
         """
-        for article in tqdm(self.input_corpus):
+        for article in tqdm(self.input_corpus.all_instances()):
             content = article['body']
             content = content.replace(u'\xa0', u' ')
             content = content.replace('\\n', '\n')
